@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Personal Portfolio</title>
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <a href="#main" class="skip">Skip to content</a> -->
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+                <li><a href='index.html'>Main</a></li>
+				<li><a href='tutorial.html' class="active">Tutorial</a></li>
+				<li><a href="yaku.html">Yaku</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<article>
+			<h1>Basic Tutorial</h1>
+			<h2>Game Settings</h2>
+			<p>
+				Japanese Mahjong use 34 kind (37 if considering red tiles), 136 tiles in each game. Specifically:
+				<ul>
+					<li>1-9 Man (abbr. 1m-9m)</li>
+					<li>1-9 Pin (abbr. 1p-9p)</li>
+					<li>1-9 Sou (abbr. 1s-9s)</li>
+					<li>4 Winds: East, North, West, South (1z-4z)</li>
+					<li>3 Dragon: White Green Red (5z-7z)</li>
+					<li>3 Red Tiles: Red 5 Man, Red 5 Pin, Red 5 Sou (0m, 0p, 0s)</li>
+				</ul>
+			</p>
+			<figure>
+				<img src="images/tiles.jpg" alt="Japanese Mahjong Tiles" width="500"/>
+				<figcaption>Tiles in Japanese Mahjong</figcaption>
+			</figure>
+			<h2>Rules</h2>
+			<p>
+				During each game, each player will draw 13 tiles as the start hand, then starting from the dealer,
+				each player will draw a tile to the player's hand, and then discard a tile in his hand. Upon drawing the tile, 
+				if the 14 tiles in the player's hand satisfy a winning hand, the player wins the game. 
+			</p>
+			<h2>How to play</h2>
+			<p>
+				We will first introduce some concepts in Japanese Mahjong:
+				<ul>
+					<li>Sequence: A set of 3 consecutive tiles (1m2m3m, 5p6p7p etc.)</li>
+					<li>Triplet: A set of 3 identical tiles (1m1m1m, 5z5z5z etc.)</li>
+					<li>Pair: A set of 2 identical tiles (1m1m etc.)</li>
+				</ul>
+			</p>
+			<p>
+				After a player has discarded a tile, other players can choose to execute one of the following calls:
+				<ul>
+					<li>Chii: If the tile is discarded by the previous player, and it can form a Sequence with 2 tiles in the player's hand, the player can use the 3 tiles to make a call</li>
+					<li>Pon: If the tile can form a Triplet with a pair in the player's hand, the player can use the 3 tiles to make a call</li>
+					<li>Kan: If the player has a Triplet identical to the discarded tile, the player can use the 4 tiles to make a call</li>
+				</ul>
+				After a player made a call, the player discard one tile and the game continues from the next counter-clockwise player. If the player Kanned, he first draw a tile from the bottom of the tile pile, then discard a tile.
+			</p>
+			<figure>
+				<img src="images/rules.jpg" alt="Basic rules in Japanese Mahjong" width="500"/>
+				<figcaption>Rules in Japanese Mahjong</figcaption>
+			</figure>
+			<h2>Winning Hand</h2>
+			<p>
+				A Winning hand is only formed if the tiles in the player's hand or used to make a call by the player is one of the following cases:
+				<ul>
+					<li>4 Sequence or Triplet + 1 Pair (1m2m3m7m7m7m4p5p6p2z2z2z5s5s)</li>
+					<li>7 Pairs: (1m1m4m4m2p2p9p9p1s1s5z5z7z7z)</li>
+					<li>13 Orphans: 1m9m1p9p1s9s1z2z3z4z5z6z7z + one arbitary tile in the previous 13 tiles</li>
+				</ul>
+			</p>
+			<p>
+				Upon satisfying one of the structure above, the tiles in the player's hand must also satisfy one of the Yaku requirements. If the last tile used to form a hand is obtained from another player, it must also not be in one of the following cases:
+				<ul>
+					<li>The player had discarded one of the potential winning tiles previously</li>
+					<li>A potential winning tile had been discarded in the same round and the player did not call it</li>
+					<li>A potential winning tile had been discarded after the player called Riichi, and the player did not call the tile</li>
+				</ul>
+			</p>
+			<p>
+				Some of the common winning hands is shown below:
+			</p>
+			<figure>
+				<img src="images/normal_winning.jpg" alt="Winning with 4 Sequences or Triplets plus 1 pair" width="500"/>
+				<figcaption>Winning with 4 Sequences or Triplets + 1 pair</figcaption>
+			</figure>
+			<figure>
+				<img src="images/seven_pairs.jpg" alt="Winning with 7 pairs" width="500"/>
+				<figcaption>Winning with 7 pairs</figcaption>
+			</figure>
+			<figure>
+				<img src="images/thirteen_orphans.jpg" alt="Winning with Thirteen Orphans" width="500"/>
+				<figcaption>Winning with Thirteen Orphans</figcaption>
+			</figure>
+		</article>
+        
+	</main>
+
+	<footer>
+		&copy; Gengchen Yang 2022. All rights reserved.
+	</footer>
+</body>
+</html>
