@@ -1,50 +1,52 @@
-h1 {
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-}
+body {
+    font-family: 'Poppins', sans-serif;
 
-h2 {
-    font-size: 15px;
-    text-align: left;
-}
+    background-image: url("../images/background.jpg");
+    background-size: 100% 100%;
+    background-color: green;
 
-h3 {
-    font-size: 10px;
-    text-align: left;
-}
+    display: grid;
+    grid-template-rows: 50px 1fr 50px 30px;
 
-article {
-    background-color: aqua;
-    color: black;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgba(182, 96, 65, 0.758);
-}
-
-nav li {
-	display: block;
-	float: left;
-	margin-left: 5px;
-	border: 2px solid rgb(255, 119, 0);
-}
-
-nav a {
-    display: block;
-    padding: 3px;
-    text-decoration: dashed;
-    background-color: rgb(255, 208, 0);
-    color: black;
-} 
-
-nav a[href]:hover {
-    background-color: blueviolet;
     color: white;
+}
+
+header {
+    grid-row: 1 / span 1;
+    
+    background-color: orange;
+    border-bottom: 5px solid purple;
+}
+
+nav {
+    margin: 15px;
+}
+
+main {
+    grid-row: 2 / span 1;
+}
+
+aside {
+    grid-row: 3 / span 1;
+}
+
+footer {
+    grid-row: 4 / span 1;
+    background-color: rgba(182, 96, 65, 0.758);
+    color: black;
+}
+
+.nav_item {
+    display:inline;
+    padding-right:20px;
+    margin: 20px;
+}
+
+.nav_item a:hover, a:focus{
+    color: #50C7C7;
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted;
 }
 
 nav .active {
@@ -52,23 +54,89 @@ nav .active {
     font-weight: bold;
 }
 
+i {
+    height: auto;
+    width: 16px;
+    animation-name: fade;
+    animation-duration: 6s;
+    justify-content: center;
+    align-self: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    header img {
+        animation: none;
+    }
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+h2 {
+    font-size: 15px;
+    text-align: left;
+    color: white;
+}
+
 img {
-    height: 25%;
-    width: 25%;
+    height: 40%;
+    width: 40%;
     padding: 10px 5px;
-    margin: 20px 10px;
-    border: 5px dotted orange;
-    background-color: rgb(0, 255, 102);
+    margin: 20px auto;
+    border: 5px dotted red;
+    background-color: lightpink;
+    min-width: 300px;
 }
 
 img:hover {
-    height: 40%;
-    width: 40%;
+    height: 60%;
+    width: 60%;
     border: 5px solid brown;
     background-color: orange;
+    min-width: 400px;
 }
 
-footer {
-    background-color: rgba(182, 96, 65, 0.758);
-    color: black;
+#galleryArticle {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+@media all and (min-width: 800px) {
+    body {
+        grid-template-rows: 50px 1fr 30px;
+        grid-template-columns: 4fr 1fr;
+    }
+
+    header {
+        grid-column: 1 / span 2;
+    }
+
+    main {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    aside {
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 1;
+    }
+
+    footer {
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 2;
+    }
+
+    aside {
+        align-self: center;
+    }
 }

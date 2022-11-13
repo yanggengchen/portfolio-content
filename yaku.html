@@ -4,19 +4,24 @@
 <head>
 	<title>Personal Portfolio</title>
 	<link rel="icon" href="images/favicon.ico">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/style.css">
-	<!-- <a href="#main" class="skip">Skip to content</a> -->
+	<!-- Google font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
 </head>
 
 <body>
 	<header>
 		<nav>
-			<ul>
-				<li><a href='index.html'>Main</a></li>
-				<li><a href='tutorial.html'>Tutorial</a></li>
-				<li><a href="yaku.html" class="active">Yaku</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
+			<ul class="nav_links">
+				<li class="nav_item"><a href='index.html'>Main</a></li>
+				<li class="nav_item"><a href='tutorial.html'>Tutorial</a></li>
+				<li class="nav_item active"><a href="yaku.html">Yaku</a></li>
+				<li class="nav_item"><a href="gallery.html">Gallery</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -106,7 +111,12 @@
 		</article>
 	</main>
 
+	<aside>
+		For more information, you can google "Japanese Mahjong Yaku".
+	</aside>
+
 	<footer>
+		<i class="fa-solid fa-house"></i>
 		&copy; Gengchen Yang 2022. All rights reserved.
 	</footer>
 </body>

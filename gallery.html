@@ -4,25 +4,30 @@
 <head>
 	<title>Personal Portfolio</title>
 	<link rel="icon" href="images/favicon.ico">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/style.css">
-	<!-- <a href="#main" class="skip">Skip to content</a> -->
+	<!-- Google font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
 </head>
 
 <body>
 	<header>
 		<nav>
-			<ul>
-				<li><a href='index.html'>Main</a></li>
-				<li><a href='tutorial.html'>Tutorial</a></li>
-				<li><a href="yaku.html">Yaku</a></li>
-				<li><a href="gallery.html" class="active">Gallery</a></li>
+			<ul class="nav_links">
+				<li class="nav_item"><a href='index.html'>Main</a></li>
+				<li class="nav_item"><a href='tutorial.html'>Tutorial</a></li>
+				<li class="nav_item"><a href="yaku.html">Yaku</a></li>
+				<li class="nav_item active"><a href="gallery.html">Gallery</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
-		<article>
+		<article id="galleryArticle">
 			<h1>Yakumans</h1>
 			<p>The max number of points that can be gained through one game is 48000 (or 32000 for non-dealer players), obtained by having 13 or more Hans in one hand, which appears less than 0.3% in winning hands.
 				This level of Han is called Yakuman, and obtaining a Yakuman has the ability to change, even reverse the results of a game. The followings are some Yakuman's I obtained.
@@ -71,6 +76,7 @@
 	</main>
 
 	<footer>
+		<i class="fa-solid fa-house"></i>
 		&copy; Gengchen Yang 2022. All rights reserved.
 	</footer>
 </body>
