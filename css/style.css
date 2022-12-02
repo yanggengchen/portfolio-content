@@ -75,6 +75,27 @@ i {
     /*justify-content: space-between;*/
 }
 
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    z-index: 1;
+  }
+  
+a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+}
+
+img:hover {
+    border: 3px dashed black;
+    background-color: lightblue;
+    min-width: 400px;
+}
+
 @media (prefers-reduced-motion: reduce) {
     header img {
         animation: none;
@@ -107,14 +128,6 @@ img {
     border: 5px dotted red;
     background-color: lightpink;
     min-width: 300px;
-}
-
-img:hover {
-    height: 60%;
-    width: 60%;
-    border: 5px solid brown;
-    background-color: orange;
-    min-width: 400px;
 }
 
 .galleryContainer {
@@ -164,6 +177,14 @@ img:hover {
     .flexitem {
         width: 300px;
         max-height: 400px;
+    }
+
+    img:hover {
+        height: 60%;
+        width: 60%;
+        border: 5px solid brown;
+        background-color: orange;
+        min-width: 400px;
     }
 }
 
